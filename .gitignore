@@ -26,6 +26,7 @@
 *.iws
 
 ## Plugin-specific files:
+.idea/xtextAutoBuilderState.xml
 
 # IntelliJ
 /out/
@@ -57,4 +58,11 @@ modules.xml
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/java,gradle,intellij
+
+/example.key
 /encryptedFile.enc
+
+# Rust
+/target
+**/*.rs.bk
+Cargo.lock

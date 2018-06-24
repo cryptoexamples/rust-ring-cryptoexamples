@@ -1,0 +1,9 @@
+[package]
+name = "rust-ring-cryptoexamples"
+version = "0.1.0"
+authors = ["Philipp Keck <philipp@philippkeck.de>"]
+
+[dependencies]
+base64 = "0.9.2"
+
+ring = "0.12.1"
