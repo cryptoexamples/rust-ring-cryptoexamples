@@ -19,4 +19,4 @@ script:
   # other script steps might be done before running the actual SonarQube analysis
   - cargo build --verbose
   - cargo test --verbose
-  - sonar-scanner
+  #- sonar-scanner
