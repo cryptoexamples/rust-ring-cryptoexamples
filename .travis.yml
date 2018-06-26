@@ -12,12 +12,11 @@ addons:
     organization: "kmindi-github" # the key of the org you chose at step #3
 cache:
   - cargo
-  directories:
-  - "$HOME/.m2/repository"
-  - "$HOME/.sonar/cache"
-before_install:
-  - chmod +x gradlew
+  - directories:
+    - "$HOME/.m2/repository"
+    - "$HOME/.sonar/cache"
 script:
   # other script steps might be done before running the actual SonarQube analysis
+  - cargo build --verbose
   - cargo test --verbose
   - sonar-scanner
