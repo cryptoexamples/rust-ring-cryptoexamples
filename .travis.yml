@@ -1,0 +1,23 @@
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
+matrix:
+  allow_failures:
+    - rust: nightly
+  fast_finish: true
+addons:
+  sonarcloud:
+    organization: "kmindi-github" # the key of the org you chose at step #3
+cache:
+  - cargo
+  directories:
+  - "$HOME/.m2/repository"
+  - "$HOME/.sonar/cache"
+before_install:
+  - chmod +x gradlew
+script:
+  # other script steps might be done before running the actual SonarQube analysis
+  - cargo test --verbose
+  - sonar-scanner
